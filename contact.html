@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | Vishwas.Life</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, sans-serif;
+      background: linear-gradient(135deg, #ffffff, #f5f8fa);
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      text-align: center;
+      padding: 30px 20px;
+      background: linear-gradient(90deg, #cce5ff, #e6f0ff);
+      color: #003366;
+      border-bottom: 3px solid #99c2ff;
+    }
+
+    header h1 {
+      font-size: 2.5em;
+      margin: 0;
+      text-shadow: 0 0 5px rgba(0, 51, 102, 0.2);
+    }
+
+    main {
+      max-width: 1000px;
+      margin: auto;
+      padding: 30px;
+    }
+
+    .contact-card {
+      background: white;
+      border-radius: 15px;
+      padding: 25px;
+      box-shadow: 0 0 15px rgba(0, 102, 204, 0.15);
+      margin-bottom: 25px;
+    }
+
+    h2 {
+      color: #004080;
+      border-bottom: 1px solid #99c2ff;
+      padding-bottom: 5px;
+    }
+
+    p {
+      line-height: 1.6;
+    }
+
+    .contact-info a {
+      color: #0066cc;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .contact-info a:hover {
+      text-decoration: underline;
+    }
+
+    .btn {
+      display: inline-block;
+      margin: 8px 10px;
+      padding: 10px 20px;
+      border-radius: 8px;
+      font-weight: bold;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      box-shadow: 0 0 10px rgba(0,102,204,0.2);
+    }
+
+    .call-btn { background: linear-gradient(45deg, #007bff, #3399ff); color: white; }
+    .email-btn { background: linear-gradient(45deg, #66b2ff, #3399ff); color: white; }
+    .whatsapp-btn { background: linear-gradient(45deg, #25D366, #128C7E); color: white; }
+
+    .btn:hover { transform: scale(1.05); }
+
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    input, textarea {
+      margin: 8px 0;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      outline: none;
+      font-size: 16px;
+      background: #fafafa;
+    }
+
+    input[type="submit"] {
+      background: linear-gradient(45deg, #007bff, #3399ff);
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      border: none;
+    }
+
+    input[type="submit"]:hover {
+      transform: scale(1.05);
+    }
+
+    iframe {
+      width: 100%;
+      height: 300px;
+      border: none;
+      border-radius: 10px;
+    }
+
+    .home-btn {
+      display: inline-block;
+      margin-top: 25px;
+      background: linear-gradient(45deg, #007bff, #3399ff);
+      padding: 10px 20px;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      box-shadow: 0 0 15px rgba(0,102,204,0.3);
+      transition: all 0.3s ease;
+    }
+
+    .home-btn:hover {
+      background: linear-gradient(45deg, #3399ff, #007bff);
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Contact Us</h1>
+  <p>We’re here to help you anytime</p>
+</header>
+
+<main>
+  <!-- Contact Information -->
+  <div class="contact-card">
+    <h2>📞 Direct Contact</h2>
+    <div class="contact-info">
+      <p><strong>Name:</strong> Anup Vishwas</p>
+      <p><strong>Email:</strong> <a href="mailto:anupvishwas@outlook.com">anupvishwas@outlook.com</a></p>
+      <p><strong>Phone:</strong> <a href="tel:+91911166600">+91 911166600</a></p>
+      <p><strong>Address:</strong> Jaipur, Rajasthan, India</p>
+    </div>
+    <a href="tel:+91911166600" class="btn call-btn">📞 Call Now</a>
+    <a href="mailto:anupvishwas@outlook.com" class="btn email-btn">📧 Send Email</a>
+    <a href="https://wa.me/91911166600" target="_blank" class="btn whatsapp-btn">💬 WhatsApp</a>
+  </div>
+
+  <!-- Contact Form -->
+  <div class="contact-card">
+    <h2>📩 Send a Message</h2>
+    <form action="https://formspree.io/f/yourFormID" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" rows="5" placeholder="Your Message..." required></textarea>
+      <input type="submit" value="Send Message">
+    </form>
+    <p style="font-size: 12px; color: #555;">We respond to all messages within 24 hours.</p>
+  </div>
+
+  <!-- Google Map -->
+  <div class="contact-card">
+    <h2>📍 Find Us</h2>
+    <iframe 
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3558.999370832577!2d75.78727001504363!3d26.912433883127775!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396db3c24e25b1c1%3A0xf8a0f58a0b83a3c3!2sJaipur%2C%20Rajasthan!5e0!3m2!1sen!2sin!4v1691325643146"
+      allowfullscreen>
+    </iframe>
+  </div>
+
+  <a href="index.html" class="home-btn">🏠 Back to Home</a>
+</main>
+
+<footer>
+  <p style="text-align: center; padding: 15px; background: #f1f1f1; color: #555; font-size: 14px;">
+    © 2025 Vishwas.Life | Your Connection, Our Commitment
+  </p>
+</footer>
+
+</body>
+</html>

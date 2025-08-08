@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <title>Stories | Vishwas.Life</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #f0f4f8, #d9e4f5);
+      color: #2c2c2c;
+      animation: fadeIn 1.5s ease-in;
+    }
+
+    /* Header */
+    header {
+      background: linear-gradient(to right, #a1c4fd, #c2e9fb);
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      animation: slideDown 1s ease-out;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 28px;
+      color: #1a1a1a;
+    }
+    header nav a {
+      text-decoration: none;
+      color: #333;
+      background: linear-gradient(to right, #fbc2eb, #a6c1ee);
+      padding: 8px 16px;
+      border-radius: 8px;
+      font-weight: bold;
+      margin-top: 10px;
+      display: inline-block;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    header nav a:hover {
+      transform: scale(1.1);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+
+    /* Main Stories List */
+    main {
+      padding: 30px;
+      display: grid;
+      gap: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+    .story-card {
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      text-align: center;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+    }
+    .story-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+    }
+    .story-card a {
+      text-decoration: none;
+      color: #444;
+      font-size: 18px;
+      font-weight: 600;
+    }
+
+    /* Footer */
+    footer {
+      background: linear-gradient(to right, #a1c4fd, #c2e9fb);
+      text-align: center;
+      padding: 15px;
+      font-size: 14px;
+      color: #333;
+      box-shadow: 0 -4px 10px rgba(0,0,0,0.1);
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    @keyframes slideDown {
+      from { transform: translateY(-50px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>⚔️ Story Never Lie</h1>
+    <nav>
+      <a href="index.html">🏠 Home</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Story Titles -->
+    <div class="story-card">
+      <a href="Top 10/top10.html">Top 10 </a>
+    </div>
+    <div class="story-card">
+      <a href="Top 10/newlyarrival.html">Newly Arrival</a>
+    </div>
+    <div class="story-card">
+      <a href="story3.html">Adventure of Life</a>
+    </div>
+    <div class="story-card">
+      <a href="story4.html">Love & Mystery</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2025 Vishwas.Life</p>
+  </footer>
+
+</body>
+</html>

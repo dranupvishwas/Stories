@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Top 10 Kahaniyan | Vishwas.Life</title>
+  <style>
+    :root{
+      --bg1: #f6f9ff;
+      --bg2: #e9f2ff;
+      --card: #ffffff;
+      --accent: #4b9cff;
+      --muted: #666b75;
+      --glass: rgba(255,255,255,0.6);
+      --shadow: 0 8px 24px rgba(35, 50, 80, 0.08);
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: linear-gradient(135deg,var(--bg1),var(--bg2));
+      color:#1f2937;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      padding:28px;
+      min-height:100vh;
+    }
+
+    header{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:18px;
+      max-width:1100px;
+      margin:0 auto 28px;
+      padding:14px 18px;
+      background: linear-gradient(90deg, rgba(255,255,255,0.6), rgba(255,255,255,0.4));
+      border-radius:12px;
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(6px);
+    }
+    .brand{
+      display:flex;
+      gap:12px;
+      align-items:center;
+    }
+    .logo{
+      width:56px; height:56px; border-radius:12px;
+      background: linear-gradient(135deg,var(--accent), #7bdcff);
+      display:grid; place-items:center;
+      color:white; font-weight:700; font-size:20px;
+      box-shadow: 0 6px 16px rgba(75,156,255,0.25);
+    }
+    h1{margin:0;font-size:20px}
+    header p{margin:0;color:var(--muted); font-size:13px}
+
+    .controls{display:flex; gap:12px; align-items:center;}
+    .search {
+      position:relative;
+    }
+    .search input{
+      padding:10px 14px;
+      width:260px;
+      border-radius:10px;
+      border:1px solid #e2e8f0;
+      outline:none;
+      font-size:14px;
+      box-shadow: 0 2px 8px rgba(43,56,80,0.04);
+      transition:box-shadow .2s, transform .15s;
+    }
+    .search input:focus{box-shadow: 0 8px 24px rgba(75,156,255,0.12); transform:translateY(-1px)}
+    .home-link{
+      padding:10px 14px;
+      background:linear-gradient(90deg,var(--accent), #7bdcff);
+      color:white; text-decoration:none; border-radius:10px;
+      font-weight:600; font-size:14px;
+      box-shadow: 0 6px 18px rgba(75,156,255,0.16);
+    }
+
+    main{
+      max-width:1100px;
+      margin: 12px auto 80px;
+      display:grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap:18px;
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:14px;
+      padding:16px;
+      box-shadow: var(--shadow);
+      transition: transform .25s ease, box-shadow .25s ease;
+      display:flex; flex-direction:column; gap:10px;
+      min-height:150px;
+    }
+    .card:hover{ transform: translateY(-8px); box-shadow: 0 18px 40px rgba(35,50,80,0.12); }
+
+    .tag{
+      font-size:12px; color:var(--muted); background:var(--glass);
+      width:max-content; padding:6px 8px; border-radius:999px;
+      border:1px solid rgba(0,0,0,0.03)
+    }
+
+    .title{ font-size:18px; font-weight:700; margin:6px 0; color:#07203a; }
+    .teaser{ color:var(--muted); font-size:14px; line-height:1.45; flex:1 }
+
+    .actions{ display:flex; gap:10px; align-items:center; margin-top:10px }
+    .read-btn{
+      padding:10px 12px; border-radius:10px; border:none; cursor:pointer;
+      background:linear-gradient(90deg,var(--accent), #7bdcff); color:white; font-weight:700;
+      box-shadow: 0 8px 20px rgba(75,156,255,0.14);
+      text-decoration:none;
+    }
+    .meta{ font-size:12px; color:var(--muted) }
+
+    /* nice header below page title */
+    .intro{
+      max-width:1100px; margin: 10px auto 18px; text-align:center; color:#223;
+    }
+    .intro p{ margin:6px auto; color:#556; max-width:780px }
+
+    /* small footer */
+    footer{ max-width:1100px; margin:30px auto 0; text-align:center; color:#556; font-size:13px }
+
+    /* responsive tweaks */
+    @media (max-width:480px){
+      header{ padding:12px }
+      .search input{ width:160px }
+      h1{ font-size:16px }
+    }
+  </style>
+</head>
+<body>
+
+  <header> <back href="top10.html">
+    <div class="brand">
+      <div class="logo">VL</div>
+      <div>
+        <h1>Vishwas.Life — Top 10 Kahaniyan</h1>
+        <p>Handpicked stories — read, feel, और जुड़ जाओ</p>
+      </div>
+    </div>
+
+    <div class="controls">
+      <div class="search">
+        <input id="searchInput" type="search" placeholder="Search kahani (title se)..." aria-label="Search stories">
+        
+      </div>
+      <a class="home-link" href="/stories.html">back</a>
+    </div>
+  </header>
+
+  <div class="intro">
+    <p>ये वो 10 कहानियाँ हैं जिन्हें हमने खास चुना है — हर एक में छोटा-सा टीज़र दिया गया है। पढ़ने के लिए "Read" पर क्लिक करें। आप चाहो तो इन्हें अपने अनुसार बदल सकते हो।</p>
+  </div>
+
+  <main id="list">
+    <!-- 1 -->
+    <article class="card" data-title="अंतिम सफ़र की डोली">
+      <div class="tag">Drama</div>
+      <div class="title">काँच का टुकड़ा</div>
+      <div class="teaser">एक छोटी-सी कहानी — करुणा, त्याग और मानवता की मिसाल।</div>
+      <div class="actions">
+        <a class="read-btn" href="kanch.html">Read</a>
+        <div class="meta">5 min read</div>
+      </div>
+    </article>
+
+    <!-- 2 -->
+    <article class="card" data-title="चाँदनी के पेड़ के नीचे">
+      <div class="tag">Romance</div>
+      <div class="title">चाँदनी के पेड़ के नीचे</div>
+      <div class="teaser">रात की एक चुप्पी में दो अनजान दिलों की मुलाक़ात — चाँदनी सब कुछ मान जाएगी या राज़ खोलेगी?</div>
+      <div class="actions">
+        <a class="read-btn" href="story2.html">Read</a>
+        <div class="meta">7 min read</div>
+      </div>
+    </article>
+
+    <!-- 3 -->
+    <article class="card" data-title="उस याद के पन्ने">
+      <div class="tag">Nostalgia</div>
+      <div class="title">उस याद के पन्ने</div>
+      <div class="teaser">एक पुरानी डायरी और गुम हुई बचपन की यादें जो फिर से जीवन को रंग दे देती हैं।</div>
+      <div class="actions">
+        <a class="read-btn" href="story3.html">Read</a>
+        <div class="meta">6 min read</div>
+      </div>
+    </article>
+
+    <!-- 4 -->
+    <article class="card" data-title="टूटी हुई घड़ी और समय का राज़">
+      <div class="tag">Mystery</div>
+      <div class="title">टूटी हुई घड़ी और समय का राज़</div>
+      <div class="teaser">एक टूटी घड़ी, एक रहस्यमयी शहर और समय से जुड़ा बड़ा सच — क्या आप तैयार हैं?</div>
+      <div class="actions">
+        <a class="read-btn" href="story4.html">Read</a>
+        <div class="meta">9 min read</div>
+      </div>
+    </article>
+
+    <!-- 5 -->
+    <article class="card" data-title="एक छोटी सी दया">
+      <div class="tag">Humanity</div>
+      <div class="title">एक छोटी सी दया</div>
+      <div class="teaser">एक मामूली सा उपकार कैसे किसी की पूरी ज़िंदगी बदल देता है — सरल और ताकतवर कहानी।</div>
+      <div class="actions">
+        <a class="read-btn" href="story5.html">Read</a>
+        <div class="meta">4 min read</div>
+      </div>
+    </article>
+
+    <!-- 6 -->
+    <article class="card" data-title="रंग-बिरंगे सपनों का मेला">
+      <div class="tag">Children</div>
+      <div class="title">रंग-बिरंगे सपनों का मेला</div>
+      <div class="teaser">बच्चों के लिए रंगीन कल्पनाओं का मेला — जहाँ सपने सच की तरह चलते हैं।</div>
+      <div class="actions">
+        <a class="read-btn" href="story6.html">Read</a>
+        <div class="meta">3 min read</div>
+      </div>
+    </article>
+
+    <!-- 7 -->
+    <article class="card" data-title="खामोश गलियों की आवाज़">
+      <div class="tag">Suspense</div>
+      <div class="title">खामोश गलियों की आवाज़</div>
+      <div class="teaser">एक पुराने मोहल्ले की खामोशी में छुपी आवाज़ें — क्या वहाँ कोई रहस्य छुपा है?</div>
+      <div class="actions">
+        <a class="read-btn" href="story7.html">Read</a>
+        <div class="meta">8 min read</div>
+      </div>
+    </article>
+
+    <!-- 8 -->
+    <article class="card" data-title="वह मुस्कान जो खो गयी">
+      <div class="tag">Emotional</div>
+      <div class="title">वह मुस्कान जो खो गयी</div>
+      <div class="teaser">एक मुस्कान की तलाश में एक जवान औरत का सफर — दर्द, उम्मीद और फिर मुस्कान।</div>
+      <div class="actions">
+        <a class="read-btn" href="story8.html">Read</a>
+        <div class="meta">6 min read</div>
+      </div>
+    </article>
+
+    <!-- 9 -->
+    <article class="card" data-title="कागज़ की नाव और बरसात">
+      <div class="tag">Poetry</div>
+      <div class="title">कागज़ की नाव और बरसात</div>
+      <div class="teaser">बरसात की एक शाम और कागज़ की नाव की सीधी-सी सादगी — छोटी लेकिन असरदार कहानी।</div>
+      <div class="actions">
+        <a class="read-btn" href="story9.html">Read</a>
+        <div class="meta">4 min read</div>
+      </div>
+    </article>
+
+    <!-- 10 -->
+    <article class="card" data-title="अजनबी शहर का मेहमान">
+      <div class="tag">Drama</div>
+      <div class="title">अजनबी शहर का मेहमान</div>
+      <div class="teaser">एक अनजान शहर में मिले एक मेहमान की आत्म-खोज — सादगी में गहरा संदेश।</div>
+      <div class="actions">
+        <a class="read-btn" href="story10.html">Read</a>
+        <div class="meta">7 min read</div>
+      </div>
+    </article>
+
+  </main>
+
+  <footer>
+    © 2025 Vishwas.Life — Read. Feel. Share.
+  </footer>
+
+  <script>
+    // Simple search/filter by title
+    const input = document.getElementById('searchInput');
+    const cards = Array.from(document.querySelectorAll('.card'));
+
+    input.addEventListener('input', () => {
+      const q = input.value.trim().toLowerCase();
+      cards.forEach(card => {
+        const title = card.dataset.title.toLowerCase();
+        if (!q || title.includes(q)) {
+          card.style.display = '';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    });
+
+    // Optional: keyboard focus quick search (press / to focus)
+    document.addEventListener('keydown', (e) => {
+      if (e.key === '/') {
+        e.preventDefault();
+        input.focus();
+      }
+    });
+  </script>
+</body>
+</html>
