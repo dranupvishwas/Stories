@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>काँच का टुकड़ा — छोटी कहानी</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0f1724;
+      --card:#0b1220cc;
+      --accent:#ffd8a8;
+      --muted:#cbd5e1;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      min-height:100vh;
+      font-family:'Noto Sans Devanagari', system-ui, sans-serif;
+      background:linear-gradient(180deg,var(--bg),#031025);
+      color:var(--muted);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:2rem;
+    }
+    /* Rainy window effect */
+    .stage{
+      width:920px;
+      max-width:96vw;
+      background:radial-gradient(circle at 10% 10%, rgba(255,255,255,0.02), transparent 10%), linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      border-radius:14px;
+      padding:2.2rem;
+      box-shadow: 0 10px 30px rgba(2,6,23,0.7), inset 0 1px 0 rgba(255,255,255,0.02);
+      position:relative;
+      overflow:hidden;
+    }
+    .glass{
+      background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.00));
+      border-radius:10px;
+      padding:2rem;
+      backdrop-filter: blur(4px) saturate(120%);
+      border:1px solid rgba(255,255,255,0.03);
+    }
+    h1{margin:0 0 0.4rem 0; color:var(--accent); font-size:1.6rem}
+    p.lead{margin:0 0 1.2rem 0; color:#e6eef8cc}
+    .story p{margin:1rem 0; line-height:1.8; font-size:1.05rem}
+    .meta{font-size:0.9rem; color:rgba(255,255,255,0.4)}
+    footer{margin-top:1.6rem; text-align:right; font-size:0.9rem; color:rgba(255,255,255,0.45)}
+
+    /* simple raindrops animation */
+    .raindrop{position:absolute; left:0; top:-30vh; width:2px; height:60vh; background:linear-gradient(#ffffff22,#ffffff00);opacity:0.06; transform:skewX(-10deg); animation:fall 4s linear infinite}
+    .raindrop.r2{left:12%; animation-duration:3.6s; opacity:0.05}
+    .raindrop.r3{left:25%; animation-duration:4.4s; opacity:0.04}
+    .raindrop.r4{left:37%; animation-duration:3s; opacity:0.055}
+    .raindrop.r5{left:49%; animation-duration:4.8s; opacity:0.045}
+    .raindrop.r6{left:61%; animation-duration:3.9s; opacity:0.05}
+    .raindrop.r7{left:74%; animation-duration:4.2s; opacity:0.05}
+    .raindrop.r8{left:86%; animation-duration:3.3s; opacity:0.06}
+    @keyframes fall{0%{transform:translateY(-40vh) skewX(-10deg)}100%{transform:translateY(80vh) skewX(-10deg)}}
+
+    /* dropcap style */
+    .story p:first-of-type::first-letter{
+      float:left;
+      font-size:3.2rem;
+      line-height:0.75;
+      margin-right:0.6rem;
+      color:var(--accent);
+      font-weight:700;
+    }
+
+    @media (max-width:520px){
+      .stage{padding:1.2rem}
+      h1{font-size:1.25rem}
+      .story p{font-size:1rem}
+    }
+  </style>
+</head>
+<body>
+  <div class="stage" role="main">
+    <div class="raindrop"></div>
+    <div class="raindrop r2"></div>
+    <div class="raindrop r3"></div>
+    <div class="raindrop r4"></div>
+    <div class="raindrop r5"></div>
+    <div class="raindrop r6"></div>
+    <div class="raindrop r7"></div>
+    <div class="raindrop r8"></div>
+
+    <article class="glass">
+      <header>
+        <h1>काँच का टुकड़ा</h1>
+        <p class="lead">🐇 खरगोश और इंसान</p>
+        <div class="meta">दया कभी व्यर्थ नहीं जाती, वह लौटकर जरूर आती है।</div>
+      </header>
+
+      <section class="story" aria-label="कहानी">
+        <p>रात के ग्यारह बजे थे। बरसात की ठंडी बूंदें खिड़की के शीशे पर गिर रही थीं।</p>
+
+        <p>माया अपनी छोटी-सी रसोई में बैठी चाय बना रही थी, लेकिन उसके हाथ कांप रहे थे। उसके बेटे आरव की तबीयत कई दिनों से बिगड़ी हुई थी, और डॉक्टर ने कहा था –</p>
+
+        <p>"अगर अगले हफ़्ते ऑपरेशन नहीं हुआ, तो बच्चा बच पाना मुश्किल है।"</p>
+
+        <p>माया के पास पैसे नहीं थे। पति दो साल पहले छोड़कर चला गया था, और घर में बस वो और 8 साल का आरव थे।</p>
+
+        <p>उसने पुराने बक्से से गहनों का छोटा डिब्बा निकाला। उसमें एक काँच का टूटा हुआ कड़ा था – आरव का बचपन का खेलौना। माया की आँखें भर आईं।<br>
+        "तेरे लिए तो जान भी दे दूँ बेटा…"</p>
+
+        <p>अगले दिन माया ने अपने सभी गहने बेच दिए, लेकिन पैसे फिर भी कम थे। पड़ोस में रहने वाले बुज़ुर्ग शर्मा जी को ये बात पता चली।
+        वो दरवाज़े पर आये और बोले –</p>
+
+        <p>"बेटी, मैंने अपनी ज़िन्दगी में बहुत कुछ देखा है… लेकिन बेटे को खोने का दर्द किसी को न सहना पड़े। ये लो, बाकी के पैसे मैं दे देता हूँ।"</p>
+
+        <p>माया ने रोते-रोते उनके पैर पकड़ लिये – <br>"आप तो हमारे लिए भगवान बन गए।"</p>
+
+        <p>ऑपरेशन सफल रहा। अस्पताल से निकलते समय आरव ने शर्मा जी का हाथ पकड़ा और मासूमियत से बोला –<br>
+        "दादाजी, जब मैं बड़ा हो जाऊँगा, तो आपकी तरह किसी की मदद ज़रूर करूँगा।"</p>
+
+        <p>शर्मा जी की आँखें भी भीग गईं।</p>
+
+        <p><strong>ज़िन्दगी का सच यही है –</strong> खून से नहीं, प्यार से रिश्ते बनते हैं… और वही रिश्ते सबसे मज़बूत होते हैं।
+        By:- Dhairya Pushkar</p>
+      </section>
+
+      <footer>
+        <small>यदि आप चाहें तो इस पन्ने को सहेजकर अपनी वेबसाइट में उपयोग कर सकते हैं।</small></p>
+      </footer>
+    </article>
+
+  </div>
+</body>
+</html>
